@@ -5,7 +5,6 @@
 		<RootNamespace>Steamworks</RootNamespace>
 		<AssemblyName>Steamworks.NET.Dissent</AssemblyName>
 		<Platforms>x64</Platforms>
-		<Configurations>Windows;OSX-Linux</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))">
