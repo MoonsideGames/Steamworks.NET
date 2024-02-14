@@ -4,17 +4,14 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<RootNamespace>Steamworks</RootNamespace>
 		<AssemblyName>Steamworks.NET.Dissent</AssemblyName>
-		<Platforms>x64</Platforms>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))">
 		<DefineConstants>STEAMWORKS_WIN;STEAMWORKS_X64</DefineConstants>
-		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))">
 		<DefineConstants>STEAMWORKS_LIN_OSX;STEAMWORKS_X64</DefineConstants>
-		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 
 	<ItemGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))">
