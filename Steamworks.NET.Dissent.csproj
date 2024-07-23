@@ -14,6 +14,10 @@
 		<DefineConstants>STEAMWORKS_LIN_OSX;STEAMWORKS_X64</DefineConstants>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))">
+		<DefineConstants>STEAMWORKS_LIN_OSX;STEAMWORKS_X64</DefineConstants>
+	</PropertyGroup>
+
 	<ItemGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))">
 		<Content Include="Binaries\steam_api64.dll">
 			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
